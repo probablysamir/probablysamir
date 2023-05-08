@@ -3,7 +3,7 @@
 - 🔭 I’m currently working on ReactJS
 - 🌱 I’m currently learning NodeJS
 - 💬 Ask me about Javascript and networking
-- 📫 How to reach me: [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samir-kattel-b1b143240/) 
+- 📫 How to reach me: [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/probablysamir/) 
 
 
 # 💻 Tech Stack:
