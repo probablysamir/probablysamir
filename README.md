@@ -1,7 +1,7 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working on ReactJS
-- 🌱 I’m currently learning NodeJS
+- 🔭 I’m currently working on Express, Node and React
+- 🌱 I’m currently learning NestJS
 - 💬 Ask me about Javascript and networking
 - 📫 How to reach me: [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/probablysamir/) 
 
