@@ -1,10 +1,10 @@
 # Samir Kattel
 
-**Backend Developer · Systems & Networking · Linux**
+**Backend Engineer · Trading Infrastructure · Low-Latency Systems**
 
-Backend developer who also goes low. I've built market making systems, worked with geospatial data, and implemented things like container runtimes and encrypted file distribution in Go. TypeScript and Python on the backend, currently working with Django. Linux native.
+Backend engineer focused on market data pipelines, order execution, and exchange connectivity for quantitative trading systems. Primary stack is Node.js/TypeScript and Python, with Go used for systems-level tooling. Experienced across the stack, from schema design to production deployment.
 
-Currently working on backend services with NestJS and researching edge computing and container orchestration.
+Currently building real-time market data infrastructure at **QubitGlobal**, and studying probability and stochastic processes for quantitative roles.
 
 ---
 
@@ -12,54 +12,68 @@ Currently working on backend services with NestJS and researching edge computing
 
 **Languages**
 
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Shell](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-**Backend & Runtime**
+**Backend & Messaging**
 
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![NATS](https://img.shields.io/badge/NATS-27AAE1?style=for-the-badge&logo=natsdotio&logoColor=white)
 
 **Data & Infrastructure**
 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Linux](https://img.shields.io/badge/linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black)
 
-GeoJSON
+**Hardware / HDL** (exploratory)
+
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-%23F1C40F.svg?style=for-the-badge)
+
+Icarus Verilog, Verilator, GTKWave
+
+---
+
+## Experience
+
+**QubitGlobal, Backend Engineer** (Oct 2024 – Present)
+Quantitative trading and analytics firm. Build and maintain market data and execution infrastructure across 13+ venues and 30+ trading pairs, processing roughly 1,000 quote updates per second. Reduced venue onboarding time from 3 days to 1, boot reconciliation to approximately 20 seconds, and deployment rollout time from 15-30 minutes to 5. Support 50+ live trading bots across 3 client accounts within a single process, with 100+ restarts and zero drift.
+
+**TokenPilot, Backend Developer** (Jan – Sep 2024)
+Market making firm. Integrated 10+ centralized exchanges, including Binance, Bybit, MEXC, Gate.io, KuCoin, and XT, through a custom connector layer that standardized order, balance, and market data formats. Processed 100,000+ orders per day with daily reporting across 20 client accounts.
 
 ---
 
 ## Projects
 
-**[chunk-store](https://github.com/probablysamir/chunk-store)** — Go CLI tool that splits large files into AES-256-GCM encrypted chunks and distributes them across multiple cloud providers and accounts. Supports round-robin load balancing, SHA-256 integrity verification, and a manifest-based system for reassembly. Built to solve real storage limits without trusting any single provider.
+**[chunk-store](https://github.com/probablysamir/chunk-store)**
+Go CLI that splits large files into AES-256-GCM encrypted chunks and distributes them across multiple cloud providers and accounts. Includes round-robin load balancing, SHA-256 integrity verification, and manifest-based reassembly.
 
-**[go-container](https://github.com/probablysamir/go-container)** — Container runtime built from scratch in Go using Linux namespaces. A ground-up implementation to understand how isolation actually works at the kernel level.
+**[go-container](https://github.com/probablysamir/go-container)**
+Container runtime built from scratch in Go using Linux namespaces, built to understand process isolation at the kernel level.
+
+**[itch-fpga](https://github.com/probablysamir/itch-fpga)**
+SystemVerilog parser for a subset of NASDAQ TotalView-ITCH 5.0 (Add Order, Order Executed, Order Cancel), built for FPGA market data ingest at one byte per clock cycle. Verified with Icarus Verilog and Verilator.
 
 ---
 
 ## Writing
 
-**[How I used Zero-Copy To Achieve Blazingly Fast File Transfers](https://medium.com/@probablysamir/how-i-used-zero-copy-to-achieve-blazingly-fast-file-transfers-d93eb093a8fb)** — A practical breakdown of zero-copy I/O and how it eliminates CPU overhead in data transfer pipelines.
+**[How I Used Zero-Copy to Achieve Blazingly Fast File Transfers](https://medium.com/@probablysamir/how-i-used-zero-copy-to-achieve-blazingly-fast-file-transfers-d93eb093a8fb)**
+An overview of zero-copy I/O and how it reduces CPU overhead in data transfer pipelines.
 
-**[Vertical vs Horizontal Scaling](https://medium.com/@probablysamir/vertical-vs-horizontal-scaling-d8cdd8db4caa)** — A clear-headed look at the two fundamental strategies for scaling systems under load, and when to reach for each.
-
----
-
-## Currently
-
-- Reading into how things actually work rather than just using them
-- Interested in systems internals, networking, and distributed infrastructure
-- Daily driving **Linux** with Hyprland and Neovim
+**[Vertical vs Horizontal Scaling](https://medium.com/@probablysamir/vertical-vs-horizontal-scaling-d8cdd8db4caa)**
+A comparison of the two core strategies for scaling systems under load, and when to apply each.
 
 ---
 
