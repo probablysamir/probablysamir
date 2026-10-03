@@ -2,7 +2,7 @@
 
 **Backend Engineer · Trading Infrastructure · Low-Latency Systems**
 
-Backend engineer focused on market data pipelines, order execution, and exchange connectivity for quantitative trading systems. Primary stack is Node.js/TypeScript and Python, with Go used for systems-level tooling. Experienced across the stack, from schema design to production deployment.
+Backend engineer focused on market data pipelines, order execution, and exchange connectivity for quantitative trading systems. Primary stack is Node.js/TypeScript and Python, with Go for control planes and developer tooling, including [Drawa](https://drawa.cc). Experienced across the stack, from schema design to production deployment.
 
 Currently building real-time market data infrastructure at **QubitGlobal**, and studying probability and stochastic processes for quantitative roles.
 
@@ -22,6 +22,7 @@ Currently building real-time market data infrastructure at **QubitGlobal**, and 
 **Backend & Messaging**
 
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -47,7 +48,7 @@ Icarus Verilog, Verilator, GTKWave
 ## Experience
 
 **QubitGlobal, Backend Engineer** (Oct 2024 – Present)
-Quantitative trading and analytics firm. Build and maintain market data and execution infrastructure across 13+ venues and 30+ trading pairs, processing roughly 1,000 quote updates per second. Reduced venue onboarding time from 3 days to 1, boot reconciliation to approximately 20 seconds, and deployment rollout time from 15-30 minutes to 5. Support 50+ live trading bots across 3 client accounts within a single process, with 100+ restarts and zero drift.
+Quantitative trading and analytics firm. Build and maintain market data and execution infrastructure across 13+ venues and 30+ trading pairs, processing roughly 1,000 quote updates per second. Replaced fixed-spread quoting with an async GLFT grid market maker whose spreads retune themselves online, and built a Go control plane on the Kubernetes API and NATS for bot rollout. Reduced venue onboarding time from 3 days to 1, boot reconciliation to approximately 20 seconds, and bot rollout time from 15-30 minutes to 30 seconds. Support 50+ live trading bots across 3 client accounts within a single process, with 100+ restarts and zero drift.
 
 **TokenPilot, Backend Developer** (Jan – Sep 2024)
 Market making firm. Integrated 10+ centralized exchanges, including Binance, Bybit, MEXC, Gate.io, KuCoin, and XT, through a custom connector layer that standardized order, balance, and market data formats. Processed 100,000+ orders per day with daily reporting across 20 client accounts.
@@ -56,18 +57,27 @@ Market making firm. Integrated 10+ centralized exchanges, including Binance, Byb
 
 ## Projects
 
+**[Drawa](https://github.com/HimalayanNomads/drawa)** · [drawa.cc](https://drawa.cc)
+Local canvas for coding agents. Runs Claude Code, OpenCode and Codex sessions side by side, draws every file they read, edit and write as a live map, and reviews each diff in the browser. Ships as a single Go binary with a React/TypeScript UI.
+
+**[GharBhada](https://ghar-bhada.com)**
+Nationwide rental platform on Django, Next.js and PostGIS. 19-source scraping pipeline, H3 hex-indexed geospatial search, PostgreSQL full-text search, and a saved-search alert engine on Celery.
+
+**[itch-fpga](https://github.com/probablysamir/itch-fpga)**
+Byte-serial SystemVerilog decoder and order book for NASDAQ TotalView-ITCH 5.0, covering 9 message types and 98% of session traffic. Verified against Python reference models on real session captures: 264M+ messages byte-identical, zero frame errors.
+
 **[chunk-store](https://github.com/probablysamir/chunk-store)**
 Go CLI that splits large files into AES-256-GCM encrypted chunks and distributes them across multiple cloud providers and accounts. Includes round-robin load balancing, SHA-256 integrity verification, and manifest-based reassembly.
 
 **[go-container](https://github.com/probablysamir/go-container)**
 Container runtime built from scratch in Go using Linux namespaces, built to understand process isolation at the kernel level.
 
-**[itch-fpga](https://github.com/probablysamir/itch-fpga)**
-SystemVerilog parser for a subset of NASDAQ TotalView-ITCH 5.0 (Add Order, Order Executed, Order Cancel), built for FPGA market data ingest at one byte per clock cycle. Verified with Icarus Verilog and Verilator.
-
 ---
 
 ## Writing
+
+**[Parsing NASDAQ ITCH on an FPGA](https://medium.com/@probablysamir/parsing-nasdaq-itch-on-an-fpga-421dac8787ed)**
+How the itch-fpga decoder frames and parses ITCH messages in hardware, one byte per clock.
 
 **[How I Used Zero-Copy to Achieve Blazingly Fast File Transfers](https://medium.com/@probablysamir/how-i-used-zero-copy-to-achieve-blazingly-fast-file-transfers-d93eb093a8fb)**
 An overview of zero-copy I/O and how it reduces CPU overhead in data transfer pipelines.
