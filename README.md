@@ -22,7 +22,6 @@ Currently building real-time market data infrastructure at **QubitGlobal**, and 
 **Backend & Messaging**
 
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -57,8 +56,8 @@ Market making firm. Integrated 10+ centralized exchanges, including Binance, Byb
 
 ## Projects
 
-**[Drawa](https://github.com/HimalayanNomads/drawa)** · [drawa.cc](https://drawa.cc)
-Local canvas for coding agents. Runs Claude Code, OpenCode and Codex sessions side by side, draws every file they read, edit and write as a live map, and reviews each diff in the browser. Ships as a single Go binary with a React/TypeScript UI.
+**[Drawa](https://github.com/HimalayanNomads/drawa)** · [drawa.cc](https://drawa.cc) ![Release](https://img.shields.io/github/v/release/HimalayanNomads/drawa) ![Stars](https://img.shields.io/github/stars/HimalayanNomads/drawa)
+Creator and lead maintainer of an open-source canvas for running coding agents side by side. Designed its Go core as a protocol translation layer: one backend interface and wire format over Claude Code's stream-json, Codex's JSON-RPC app-server and OpenCode's HTTP event stream, with indexed per-session buffers so a reloaded page re-attaches mid-response, process-group isolation for agents and their tools, and git hardening for cloning untrusted repos.
 
 **[GharBhada](https://ghar-bhada.com)**
 Nationwide rental platform on Django, Next.js and PostGIS. 19-source scraping pipeline, H3 hex-indexed geospatial search, PostgreSQL full-text search, and a saved-search alert engine on Celery.
